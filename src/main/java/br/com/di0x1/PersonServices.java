@@ -16,6 +16,7 @@ public class PersonServices {
 
 
     public List<Person> findAll() {
+        logger.info("Finding all person");
         List<Person> persons = new ArrayList<Person>();
         for(int i=0; i<8; i++){
             Person person = mockPerson(i);
@@ -37,6 +38,11 @@ public class PersonServices {
 
     }
 
+    public Person create(Person person){
+        logger.info("Creating one person");
+        return person;
+    }
+
     public Person findById(String id){
         logger.info("Finding one person");
 
@@ -48,5 +54,15 @@ public class PersonServices {
         person.setGender("Male");
 
         return person;
+    }
+
+    public Person update(Person person){
+        logger.info("Updating a person");
+
+        return person;
+    }
+
+    public void delete(String id){
+        logger.info("Deleting");
     }
 }
